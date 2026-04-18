@@ -11,6 +11,7 @@ This script creates new database named "DataWarehouse". Additionally, the script
 IF EXISTS(SELECT 1 FROM sys.databases WHERE name ="DataWarehouse")
 BEGIN
   ALTER DATABASE DataWarehouse SET SINGLE USER WITH ROLLBACK IMMEDIATE;
+DROP DATABASE DataWarehouse;
 Use Master;
 
 CREATE DATABASE DataWarehouse;
